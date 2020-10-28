@@ -34,18 +34,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.interstitial = [self createAndLoadInterstitialWithAdUnitId:[AdConfigurations gamInterstitialAdUnitId]];
+    self.interstitial = [[DFPInterstitial alloc] initWithAdUnitID:[AdConfigurations gamInterstitialAdUnitId]];
+    self.interstitial.delegate = self;
+
+    [self loadInterstitial];
 }
 
-- (DFPInterstitial *)createAndLoadInterstitialWithAdUnitId:(NSString *)adUnitId {
-    DFPInterstitial *interstitial = [[DFPInterstitial alloc] initWithAdUnitID:adUnitId];
-    DFPRequest *request = [DFPRequest request];
-    interstitial.delegate = self;
+- (void)loadInterstitial {
+    [[Criteo sharedCriteo] loadBidForAdUnit:[AdConfigurations criteoInterstitialAdUnit] responseHandler:^(CRBid *bid) {
+        // existing Ad Manager request
+        DFPRequest *request = [DFPRequest request];
 
-    [[Criteo sharedCriteo] setBidsForRequest:request withAdUnit:[AdConfigurations criteoInterstitialAdUnit]];
+        // add Criteo bids into Ad Manager request
+        [[Criteo sharedCriteo] enrichAdObject:request withBid:bid];
 
-    [interstitial loadRequest:request];
-    return interstitial;
+        // load Interstitial ad
+        [self.interstitial loadRequest:request];
+    }];
 }
 
 - (IBAction)displayInterstitial {

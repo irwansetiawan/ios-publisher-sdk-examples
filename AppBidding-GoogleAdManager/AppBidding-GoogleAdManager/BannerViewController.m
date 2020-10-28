@@ -41,11 +41,17 @@
 }
 
 - (void)displayBanner {
-    DFPRequest *request = [DFPRequest request];
+    [[Criteo sharedCriteo] loadBidForAdUnit:[AdConfigurations criteoBannerAdUnit] responseHandler:^(CRBid *bid) {
+        // Called when a response is received, or timed out.
+        // Enrich ad object with bid, and load Banner here.
 
-    [[Criteo sharedCriteo] setBidsForRequest:request withAdUnit:[AdConfigurations criteoBannerAdUnit]];
+        DFPRequest *request = [DFPRequest request];
 
-    [self.bannerView loadRequest:request];
+        [[Criteo sharedCriteo] enrichAdObject:request withBid:bid];
+
+        [self.bannerView loadRequest:request];
+
+    }];
 }
 
 @end
