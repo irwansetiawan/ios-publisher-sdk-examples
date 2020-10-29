@@ -28,3 +28,10 @@ target 'Standalone' do
 
   pod 'CriteoPublisherSdk', '4.0.0-rc1'
 end
+
+target 'SwiftTest' do
+  project 'SwiftTest/SwiftTest.xcodeproj'
+  use_frameworks!
+
+  pod 'CriteoPublisherSdk', '4.0.0-rc1'
+end
