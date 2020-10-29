@@ -44,8 +44,10 @@
 
 - (void)loadInterstitial {
     [[Criteo sharedCriteo] loadBidForAdUnit:[AdConfigurations criteoInterstitialAdUnit] responseHandler:^(CRBid *bid) {
-        // add Criteo bids into MoPub interstitial object
-        [[Criteo sharedCriteo] enrichAdObject:self.interstitial withBid:bid];
+        if (bid != nil) {
+            // add Criteo bids into MoPub interstitial object
+            [[Criteo sharedCriteo] enrichAdObject:self.interstitial withBid:bid];
+        }
 
         // load Interstitial ad
         [self.interstitial loadAd];

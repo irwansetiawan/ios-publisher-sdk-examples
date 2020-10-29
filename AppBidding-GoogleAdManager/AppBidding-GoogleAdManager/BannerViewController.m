@@ -47,7 +47,9 @@
 
         DFPRequest *request = [DFPRequest request];
 
-        [[Criteo sharedCriteo] enrichAdObject:request withBid:bid];
+        if (bid != nil) {
+            [[Criteo sharedCriteo] enrichAdObject:request withBid:bid];
+        }
 
         [self.bannerView loadRequest:request];
 

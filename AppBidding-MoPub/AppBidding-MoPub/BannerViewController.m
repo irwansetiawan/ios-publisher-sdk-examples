@@ -41,8 +41,10 @@
     [self.view addSubview:self.adView];
 
     [[Criteo sharedCriteo] loadBidForAdUnit:[AdConfigurations criteoBannerAdUnit] responseHandler:^(CRBid *bid) {
-        // add Criteo bids into MoPub Ad View object
-        [[Criteo sharedCriteo] enrichAdObject:self.adView withBid:bid];
+        if (bid != nil) {
+            // add Criteo bids into MoPub Ad View object
+            [[Criteo sharedCriteo] enrichAdObject:self.adView withBid:bid];
+        }
 
         // load Banner ad
         [self.adView loadAd];

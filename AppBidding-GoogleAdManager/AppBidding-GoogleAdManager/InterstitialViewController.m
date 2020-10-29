@@ -45,8 +45,10 @@
         // existing Ad Manager request
         DFPRequest *request = [DFPRequest request];
 
-        // add Criteo bids into Ad Manager request
-        [[Criteo sharedCriteo] enrichAdObject:request withBid:bid];
+        if (bid != nil) {
+            // add Criteo bids into Ad Manager request
+            [[Criteo sharedCriteo] enrichAdObject:request withBid:bid];
+        }
 
         // load Interstitial ad
         [self.interstitial loadRequest:request];
