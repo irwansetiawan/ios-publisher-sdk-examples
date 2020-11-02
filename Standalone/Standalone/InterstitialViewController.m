@@ -47,8 +47,10 @@
     }
 }
 
-// Invoked when interstitial ad content has been completely loaded and is ready to be presented. This is an apt place to present the interstitial
-- (void)interstitialIsReadyToPresent:(CRInterstitial *)interstitial {
+
+// implementing the delegate methods
+// Invoked when the interstitial is loaded with an ad and ready to be displayed.
+- (void)interstitialDidReceiveAd:(CRInterstitial *)interstitial {
     self.displayInterstitialButton.enabled = YES;
     [self.displayInterstitialButton setTitle:@"Display Interstitial" forState:UIControlStateNormal];
 }
