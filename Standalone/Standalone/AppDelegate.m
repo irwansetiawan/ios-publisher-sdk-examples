@@ -37,6 +37,12 @@
     // Register Criteo SDK as early as possible
     [[Criteo sharedCriteo] registerCriteoPublisherId:[AdConfigurations criteoPublisherId] withAdUnits:adUnits];
 
+    CRUserData *userData = [CRUserData userDataWithDictionary:@{
+        CRUserDataHashedEmail: [CREmailHasher hash:@"email@criteo.com"],
+        CRUserDataDevUserId: @123
+    }];
+    [[Criteo sharedCriteo] setUserData:userData];
+
     return YES;
 }
 
