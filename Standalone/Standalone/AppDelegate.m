@@ -29,6 +29,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    [Criteo setDebugLogsEnabled:true];
+    
     // Override point for customization after application launch.
     NSArray *adUnits = @[
         [AdConfigurations criteoBannerAdUnit],
