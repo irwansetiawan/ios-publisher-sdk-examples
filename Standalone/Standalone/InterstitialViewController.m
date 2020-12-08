@@ -47,14 +47,14 @@
     }
 }
 
-// Invoked when interstitial ad content has been completely loaded and is ready to be presented. This is an apt place to present the interstitial
-- (void)interstitialIsReadyToPresent:(CRInterstitial *)interstitial {
-    self.displayInterstitialButton.enabled = YES;
-    [self.displayInterstitialButton setTitle:@"Display Interstitial" forState:UIControlStateNormal];
-}
 
 - (void)interstitial:(CRInterstitial *)interstitial didFailToReceiveAdWithError:(NSError *)error {
     self.displayInterstitialButton.enabled = NO;
     [self.displayInterstitialButton setTitle:@"Ad Failed to Load" forState:UIControlStateNormal];
+}
+
+- (void)interstitialDidReceiveAd:(CRInterstitial *)interstitial {
+    self.displayInterstitialButton.enabled = YES;
+    [self.displayInterstitialButton setTitle:@"Display Interstitial" forState:UIControlStateNormal];
 }
 @end
