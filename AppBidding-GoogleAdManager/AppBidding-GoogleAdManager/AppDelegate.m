@@ -30,6 +30,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    [Criteo setVerboseLogsEnabled:YES];
+
     CRUserData *userData = [CRUserData userDataWithDictionary:@{
         CRUserDataHashedEmail: [CREmailHasher hash:@"email@criteo.com"],
         CRUserDataDevUserId: @123456
