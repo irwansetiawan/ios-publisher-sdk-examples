@@ -30,7 +30,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    [Criteo setDebugLogsEnabled:true];
+    [Criteo setVerboseLogsEnabled:YES];
     
     // Override point for customization after application launch.
     NSArray *adUnits = @[
