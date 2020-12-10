@@ -38,8 +38,12 @@
     // Initialize banner View with banner ad unit.
     self.bannerView = [[CRBannerView alloc] initWithAdUnit:[AdConfigurations criteoBannerAdUnit]];
 
+    CRContextData *contextData = [CRContextData contextDataWithDictionary:@{
+        CRContextDataContentUrl : @"https://mysite.com/article/123"
+    }];
+
     // Load the bannerView with ad.
-    [self.bannerView loadAd];
+    [self.bannerView loadAdWithContext:contextData];
     
     [self.standaloneBannerView addSubview:self.bannerView];
 }
