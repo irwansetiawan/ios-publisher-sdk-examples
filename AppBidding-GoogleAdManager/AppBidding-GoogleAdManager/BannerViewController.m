@@ -43,8 +43,11 @@
 - (void)displayBanner {
     DFPRequest *request = [DFPRequest request];
 
+    CRContextData *contextData = [CRContextData contextDataWithDictionary:@{
+        CRContextDataContentUrl : @"https://mysite.com/article/123"
+    }];
 
-    [[Criteo sharedCriteo] loadBidForAdUnit:[AdConfigurations criteoBannerAdUnit] responseHandler:^(CRBid *bid) {
+    [[Criteo sharedCriteo] loadBidForAdUnit:[AdConfigurations criteoBannerAdUnit] withContext:contextData responseHandler:^(CRBid *bid) {
         [[Criteo sharedCriteo] enrichAdObject:request withBid:bid];
         [self.bannerView loadRequest:request];
     }];
