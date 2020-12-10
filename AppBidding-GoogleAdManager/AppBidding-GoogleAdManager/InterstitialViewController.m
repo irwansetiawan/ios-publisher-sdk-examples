@@ -42,9 +42,10 @@
     DFPRequest *request = [DFPRequest request];
     interstitial.delegate = self;
 
-    [[Criteo sharedCriteo] setBidsForRequest:request withAdUnit:[AdConfigurations criteoInterstitialAdUnit]];
-
-    [interstitial loadRequest:request];
+    [[Criteo sharedCriteo] loadBidForAdUnit:[AdConfigurations criteoInterstitialAdUnit] responseHandler:^(CRBid *bid) {
+        [[Criteo sharedCriteo] enrichAdObject:request withBid:bid];
+        [interstitial loadRequest:request];
+    }];
     return interstitial;
 }
 

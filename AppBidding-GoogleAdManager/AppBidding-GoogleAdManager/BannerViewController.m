@@ -43,9 +43,12 @@
 - (void)displayBanner {
     DFPRequest *request = [DFPRequest request];
 
-    [[Criteo sharedCriteo] setBidsForRequest:request withAdUnit:[AdConfigurations criteoBannerAdUnit]];
 
-    [self.bannerView loadRequest:request];
+    [[Criteo sharedCriteo] loadBidForAdUnit:[AdConfigurations criteoBannerAdUnit] responseHandler:^(CRBid *bid) {
+        [[Criteo sharedCriteo] enrichAdObject:request withBid:bid];
+        [self.bannerView loadRequest:request];
+    }];
+
 }
 
 @end

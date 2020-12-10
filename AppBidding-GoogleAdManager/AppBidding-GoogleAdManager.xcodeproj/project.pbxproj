@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		81BE9FA491A6B408D3657AEB /* Pods_AppBidding_GoogleAdManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE6F46C6049A8506105D400 /* Pods_AppBidding_GoogleAdManager.framework */; };
+		912092C42581FBEE008DAAD1 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912092C32581FBEE008DAAD1 /* Empty.swift */; };
 		918F15AE245AD07D001E6671 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 918F15AD245AD07D001E6671 /* AppDelegate.m */; };
 		918F15B4245AD07D001E6671 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 918F15B3245AD07D001E6671 /* HomeViewController.m */; };
 		918F15B7245AD07D001E6671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 918F15B5245AD07D001E6671 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		3AE4B0DB124D258D023799BF /* Pods-AppBidding-GoogleAdManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBidding-GoogleAdManager.debug.xcconfig"; path = "Target Support Files/Pods-AppBidding-GoogleAdManager/Pods-AppBidding-GoogleAdManager.debug.xcconfig"; sourceTree = "<group>"; };
 		7CE6F46C6049A8506105D400 /* Pods_AppBidding_GoogleAdManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppBidding_GoogleAdManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		912092C32581FBEE008DAAD1 /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
 		918F15A9245AD07D001E6671 /* AppBidding-GoogleAdManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppBidding-GoogleAdManager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		918F15AC245AD07D001E6671 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		918F15AD245AD07D001E6671 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				918F15BA245AD07F001E6671 /* LaunchScreen.storyboard */,
 				918F15BD245AD07F001E6671 /* Info.plist */,
 				918F15BE245AD07F001E6671 /* main.m */,
+				912092C32581FBEE008DAAD1 /* Empty.swift */,
 			);
 			path = "AppBidding-GoogleAdManager";
 			sourceTree = "<group>";
@@ -149,7 +152,7 @@
 				TargetAttributes = {
 					918F15A8245AD07D001E6671 = {
 						CreatedOnToolsVersion = 11.3.1;
-						LastSwiftMigration = 1150;
+						LastSwiftMigration = 1220;
 					};
 				};
 			};
@@ -236,6 +239,7 @@
 				91A5EA10248FA3F400772881 /* CriteoSample.m in Sources */,
 				918F15BF245AD07F001E6671 /* main.m in Sources */,
 				91AD33382472312500742852 /* AdConfigurations.m in Sources */,
+				912092C42581FBEE008DAAD1 /* Empty.swift in Sources */,
 				91A5EA0D248F593800772881 /* InterstitialViewController.m in Sources */,
 				91A5EA0A248F592400772881 /* BannerViewController.m in Sources */,
 			);
