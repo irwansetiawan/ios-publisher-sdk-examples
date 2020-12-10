@@ -30,6 +30,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    CRUserData *userData = [CRUserData userDataWithDictionary:@{
+        CRUserDataHashedEmail: [CREmailHasher hash:@"email@criteo.com"],
+        CRUserDataDevUserId: @123456
+    }];
+    [[Criteo sharedCriteo] setUserData:userData];
+
     NSArray *adUnits = @[
         [AdConfigurations criteoBannerAdUnit],
         [AdConfigurations criteoInterstitialAdUnit]
