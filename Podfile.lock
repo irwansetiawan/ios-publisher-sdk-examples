@@ -1,7 +1,7 @@
 PODS:
-  - CriteoPublisherSdk (4.0.3):
-    - CriteoPublisherSdk/Sdk (= 4.0.3)
-  - CriteoPublisherSdk/Sdk (4.0.3)
+  - CriteoPublisherSdk (4.1.0-rc1):
+    - CriteoPublisherSdk/Sdk (= 4.1.0-rc1)
+  - CriteoPublisherSdk/Sdk (4.1.0-rc1)
   - Google-Mobile-Ads-SDK (7.65.0):
     - GoogleAppMeasurement (~> 6.0)
     - GoogleUserMessagingPlatform (~> 1.1)
@@ -45,12 +45,13 @@ PODS:
   - PromisesObjC (1.2.10)
 
 DEPENDENCIES:
-  - CriteoPublisherSdk (from `https://github.com/criteo/ios-publisher-sdk`, branch `logging/debug-mode`)
+  - CriteoPublisherSdk (= 4.1.0-rc1)
   - Google-Mobile-Ads-SDK (~> 7.60)
   - mopub-ios-sdk (~> 5.13.0)
 
 SPEC REPOS:
   trunk:
+    - CriteoPublisherSdk
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleUserMessagingPlatform
@@ -59,18 +60,8 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
 
-EXTERNAL SOURCES:
-  CriteoPublisherSdk:
-    :branch: logging/debug-mode
-    :git: https://github.com/criteo/ios-publisher-sdk
-
-CHECKOUT OPTIONS:
-  CriteoPublisherSdk:
-    :commit: 3c085ade973303c9c5a4be0cd1df41d0fd5ac239
-    :git: https://github.com/criteo/ios-publisher-sdk
-
 SPEC CHECKSUMS:
-  CriteoPublisherSdk: 2f010f1245f338b30ae37c71921e979d7638b780
+  CriteoPublisherSdk: 3557536639a24552e9c108f228665531fcbc31b3
   Google-Mobile-Ads-SDK: af735e001ee534d9dd2ce0a87cd8c355b19844b5
   GoogleAppMeasurement: ecc30d0ab5b66d7d18e85ce1b8e2b345db60626d
   GoogleUserMessagingPlatform: 9dc714d2e1f0aa727b9cc52d266dc1b155f4c3f2
@@ -79,6 +70,6 @@ SPEC CHECKSUMS:
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
 
-PODFILE CHECKSUM: 57150b0a5f9c4d01adaab6f3a96d03dad42136b9
+PODFILE CHECKSUM: 2a5c01cbd73beefbea276a72df4f304bd175b893
 
 COCOAPODS: 1.9.3
