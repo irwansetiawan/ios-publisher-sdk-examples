@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		915B883425870635003F88DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 915B883325870635003F88DF /* Assets.xcassets */; };
 		915B883725870635003F88DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 915B883525870635003F88DF /* LaunchScreen.storyboard */; };
 		915B883A25870635003F88DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 915B883925870635003F88DF /* main.m */; };
+		919149B925870A8100601084 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919149B825870A8100601084 /* Empty.swift */; };
 		B49FBF07C047C72FF41DAEBE /* Pods_Mediation_Admob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58AB6EA588A62B4B65066283 /* Pods_Mediation_Admob.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		915B883625870635003F88DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		915B883825870635003F88DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		915B883925870635003F88DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		919149B825870A8100601084 /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
 		FA553F02D2E2E11CFE65557F /* Pods-Mediation-Admob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediation-Admob.release.xcconfig"; path = "Target Support Files/Pods-Mediation-Admob/Pods-Mediation-Admob.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +76,7 @@
 				915B883525870635003F88DF /* LaunchScreen.storyboard */,
 				915B883825870635003F88DF /* Info.plist */,
 				915B883925870635003F88DF /* main.m */,
+				919149B825870A8100601084 /* Empty.swift */,
 			);
 			path = "Mediation-Admob";
 			sourceTree = "<group>";
@@ -128,6 +131,7 @@
 				TargetAttributes = {
 					915B882325870631003F88DF = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 				};
 			};
@@ -210,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				915B882F25870631003F88DF /* ViewController.m in Sources */,
+				919149B925870A8100601084 /* Empty.swift in Sources */,
 				915B882925870631003F88DF /* AppDelegate.m in Sources */,
 				915B883A25870635003F88DF /* main.m in Sources */,
 			);
@@ -355,6 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S655EV5659;
 				INFOPLIST_FILE = "Mediation-Admob/Info.plist";
@@ -364,6 +370,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.criteo.samples.Mediation-Admob";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -374,6 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S655EV5659;
 				INFOPLIST_FILE = "Mediation-Admob/Info.plist";
@@ -383,6 +392,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.criteo.samples.Mediation-Admob";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
