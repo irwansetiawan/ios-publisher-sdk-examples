@@ -1,6 +1,9 @@
 PODS:
   - CriteoPublisherSdk (4.1.0-rc2):
     - CriteoPublisherSdk/Sdk (= 4.1.0-rc2)
+  - CriteoPublisherSdk/GoogleAdapter (4.1.0-rc2):
+    - CriteoPublisherSdk/Sdk
+    - Google-Mobile-Ads-SDK (~> 7.49)
   - CriteoPublisherSdk/Sdk (4.1.0-rc2)
   - Google-Mobile-Ads-SDK (7.65.0):
     - GoogleAppMeasurement (~> 6.0)
@@ -46,6 +49,7 @@ PODS:
 
 DEPENDENCIES:
   - CriteoPublisherSdk (= 4.1.0-rc2)
+  - CriteoPublisherSdk/GoogleAdapter (= 4.1.0-rc2)
   - Google-Mobile-Ads-SDK (~> 7.60)
   - mopub-ios-sdk (~> 5.13.0)
 
@@ -70,6 +74,6 @@ SPEC CHECKSUMS:
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
 
-PODFILE CHECKSUM: 1b0f2cc453c04b0c93b936af2a8ff112d28f7b91
+PODFILE CHECKSUM: 05b7d4d76f9417a9eff298440c02a67629334937
 
 COCOAPODS: 1.9.3

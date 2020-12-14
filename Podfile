@@ -28,3 +28,11 @@ target 'Standalone' do
 
   pod 'CriteoPublisherSdk', '4.1.0-rc2'
 end
+
+
+target 'Mediation-Admob' do
+  project 'Mediation-Admob/Mediation-Admob.xcodeproj'
+  use_frameworks!
+
+  pod 'CriteoPublisherSdk/GoogleAdapter', '4.1.0-rc2'
+end
