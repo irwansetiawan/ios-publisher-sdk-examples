@@ -6,6 +6,13 @@
 //
 
 #import "AppDelegate.h"
+#if __has_include(<MoPub/MoPub.h>)
+#import <MoPub/MoPub.h>
+#elif __has_include(<MoPubSDKFramework/MoPub.h>)
+#import <MoPubSDKFramework/MoPub.h>
+#else
+#import "MoPub.h"
+#endif
 
 @interface AppDelegate ()
 
@@ -15,7 +22,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:@"5f6c4592630f4f96bc3106b6ed0cc3f1"];
+
+    [[MoPub sharedInstance] initializeSdkWithConfiguration:sdkConfig completion:^{
+            NSLog(@"SDK initialization complete");
+            // SDK initialization complete. Ready to make ad requests.
+    }];
+
     return YES;
 }
 
