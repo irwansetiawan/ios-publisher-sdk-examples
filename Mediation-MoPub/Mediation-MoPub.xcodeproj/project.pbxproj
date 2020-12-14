@@ -13,9 +13,11 @@
 		919149D4258731FC00601084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 919149D3258731FC00601084 /* Assets.xcassets */; };
 		919149D7258731FC00601084 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 919149D5258731FC00601084 /* LaunchScreen.storyboard */; };
 		919149DA258731FC00601084 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 919149D9258731FC00601084 /* main.m */; };
+		A0564885DCE586D4BCFFC15E /* Pods_Mediation_MoPub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5444DB8E7D6B7919DE5DC5 /* Pods_Mediation_MoPub.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		79EA82D1BAE2DA61B4BB5385 /* Pods-Mediation-MoPub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediation-MoPub.debug.xcconfig"; path = "Target Support Files/Pods-Mediation-MoPub/Pods-Mediation-MoPub.debug.xcconfig"; sourceTree = "<group>"; };
 		919149C4258731F600601084 /* Mediation-MoPub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mediation-MoPub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		919149C7258731F600601084 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		919149C8258731F600601084 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		919149D6258731FC00601084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		919149D8258731FC00601084 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		919149D9258731FC00601084 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B562BA957CDD3B243448D51D /* Pods-Mediation-MoPub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediation-MoPub.release.xcconfig"; path = "Target Support Files/Pods-Mediation-MoPub/Pods-Mediation-MoPub.release.xcconfig"; sourceTree = "<group>"; };
+		FD5444DB8E7D6B7919DE5DC5 /* Pods_Mediation_MoPub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mediation_MoPub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0564885DCE586D4BCFFC15E /* Pods_Mediation_MoPub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		660F2BAA912EE96EEF00E68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD5444DB8E7D6B7919DE5DC5 /* Pods_Mediation_MoPub.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		830B0BA5ECB37FC91778012F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				79EA82D1BAE2DA61B4BB5385 /* Pods-Mediation-MoPub.debug.xcconfig */,
+				B562BA957CDD3B243448D51D /* Pods-Mediation-MoPub.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 		919149BB258731F600601084 = {
 			isa = PBXGroup;
 			children = (
 				919149C6258731F600601084 /* Mediation-MoPub */,
 				919149C5258731F600601084 /* Products */,
+				830B0BA5ECB37FC91778012F /* Pods */,
+				660F2BAA912EE96EEF00E68F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,9 +103,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 919149DD258731FC00601084 /* Build configuration list for PBXNativeTarget "Mediation-MoPub" */;
 			buildPhases = (
+				1C9CD64E46EE3141490D2D23 /* [CP] Check Pods Manifest.lock */,
 				919149C0258731F600601084 /* Sources */,
 				919149C1258731F600601084 /* Frameworks */,
 				919149C2258731F600601084 /* Resources */,
+				F87AA3F124A59961A89C0801 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,6 +161,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C9CD64E46EE3141490D2D23 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mediation-MoPub-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F87AA3F124A59961A89C0801 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mediation-MoPub/Pods-Mediation-MoPub-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mediation-MoPub/Pods-Mediation-MoPub-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mediation-MoPub/Pods-Mediation-MoPub-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		919149C0258731F600601084 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		919149DE258731FC00601084 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79EA82D1BAE2DA61B4BB5385 /* Pods-Mediation-MoPub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -300,6 +370,7 @@
 		};
 		919149DF258731FC00601084 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B562BA957CDD3B243448D51D /* Pods-Mediation-MoPub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

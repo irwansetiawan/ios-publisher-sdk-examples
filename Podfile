@@ -36,3 +36,11 @@ target 'Mediation-Admob' do
 
   pod 'CriteoPublisherSdk/GoogleAdapter', '4.1.0-rc2'
 end
+
+
+target 'Mediation-MoPub' do
+  project 'Mediation-MoPub/Mediation-MoPub.xcodeproj'
+  use_frameworks!
+
+  pod 'CriteoPublisherSdk/MoPubAdapter', '4.1.0-rc2'
+end
