@@ -11,6 +11,9 @@
       location = "group:Standalone/Standalone.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Mediation-Admob/Mediation-Admob.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
