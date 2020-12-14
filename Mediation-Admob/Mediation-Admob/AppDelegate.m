@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+@import GoogleMobileAds;
 
 @interface AppDelegate ()
 
@@ -15,7 +16,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    GADMobileAds *ads = [GADMobileAds sharedInstance];
+    [ads startWithCompletionHandler:^(GADInitializationStatus *status) {
+      // Optional: Log each adapter's initialization latency.
+      NSDictionary *adapterStatuses = [status adapterStatusesByClassName];
+      for (NSString *adapter in adapterStatuses) {
+        GADAdapterStatus *adapterStatus = adapterStatuses[adapter];
+        NSLog(@"Adapter Name: %@, Description: %@, Latency: %f", adapter,
+              adapterStatus.description, adapterStatus.latency);
+      }
+
+      // Start loading ads here...
+    }];
+
     return YES;
 }
 
